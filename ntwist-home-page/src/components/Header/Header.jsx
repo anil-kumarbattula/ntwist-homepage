@@ -1,4 +1,4 @@
-// src/components/Header/Header.jsx
+
 import React, { useState } from 'react';
 import './Header.css'; // Component-specific CSS
 

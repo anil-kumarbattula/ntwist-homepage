@@ -1,4 +1,4 @@
-// src/components/AIPoweredInsightSection/AIPoweredInsightSection.jsx
+
 import React from 'react';
 import './AIPoweredInsightSection.css';
 

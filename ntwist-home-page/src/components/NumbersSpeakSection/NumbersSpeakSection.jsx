@@ -1,4 +1,4 @@
-// src/components/NumbersSpeakSection/NumbersSpeakSection.jsx
+
 import React from 'react';
 import './NumbersSpeakSection.css';
 

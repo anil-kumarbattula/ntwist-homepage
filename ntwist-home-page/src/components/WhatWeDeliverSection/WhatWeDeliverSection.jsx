@@ -1,4 +1,4 @@
-// src/components/WhatWeDeliverSection/WhatWeDeliverSection.jsx
+
 import React from 'react';
 import './WhatWeDeliverSection.css';
 

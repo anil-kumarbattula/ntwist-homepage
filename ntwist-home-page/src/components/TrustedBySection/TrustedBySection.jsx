@@ -1,4 +1,4 @@
-// src/components/TrustedBySection/TrustedBySection.jsx
+
 import React from 'react';
 import './TrustedBySection.css';
 

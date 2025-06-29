@@ -1,4 +1,4 @@
-// src/components/BusinessImpactSection/BusinessImpactSection.jsx
+
 import React from 'react';
 import './BusinessImpactSection.css';
 

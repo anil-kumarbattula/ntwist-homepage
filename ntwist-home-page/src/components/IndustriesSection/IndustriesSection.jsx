@@ -1,4 +1,4 @@
-// src/components/IndustriesSection/IndustriesSection.jsx
+
 import React from 'react';
 import './IndustriesSection.css';
 
