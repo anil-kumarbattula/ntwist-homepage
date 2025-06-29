@@ -22,54 +22,54 @@ This project is a React-based clone of the NTWIST homepage, enhanced with a basi
 The project is divided into two main parts: the React frontend and the Node.js/Express.js backend, residing in separate folders to maintain clear separation of concerns.
 
 .
-├── ntwist-home-page/             # React Frontend Project Root ⚛️
+├── ntwist-home-page/            
 │   ├── public/
-│   │   ├── images/               # Static assets like images 🖼️
+│   │   ├── images/               
 │   │   │   ├── unified-data-access.jpeg
 │   │   │   ├── ai-chip.jpeg
 │   │   │   ├── data-access.jpeg
 │   │   │   ├── ntwist-logo.png
-│   │   │   └── ... (other homepage specific images like client logos)
-│   │   ├── index.html            # Main HTML file for React app
+│   │   │   └── ... (other homepage specific images)
+│   │   ├── index.html           
 │   │   └── favicon.ico
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── AIPoweredInsightSection/
-│   │   │   │   ├── AIPoweredInsightSection.jsx  # AI-Powered Insight section with phases
+│   │   │   │   ├── AIPoweredInsightSection.jsx  
 │   │   │   │   └── AIPoweredInsightSection.css
-│   │   │   ├── Footer/                  # (Assumed based on general webpage structure)
+│   │   │   ├── Footer/               
 │   │   │   │   ├── Footer.jsx
 │   │   │   │   └── Footer.css
-│   │   │   ├── Header/                  # Top navigation bar 导航
+│   │   │   ├── Header/           
 │   │   │   │   ├── Header.jsx
 │   │   │   │   └── Header.css
-│   │   │   ├── HeroSection/             # "From Data to Decision, Seamlessly." section
+│   │   │   ├── HeroSection/        
 │   │   │   │   ├── HeroSection.jsx
 │   │   │   │   └── HeroSection.css
-│   │   │   ├── LoginSection/            # Dedicated login form component 🔐
+│   │   │   ├── LoginSection/        
 │   │   │   │   ├── LoginSection.jsx
 │   │   │   │   └── LoginSection.css
-│   │   │   ├── TrustedBySection/        # "Trusted by Operations That Don't Settle" section
+│   │   │   ├── TrustedBySection/       
 │   │   │   │   ├── TrustedBySection.jsx
 │   │   │   │   └── TrustedBySection.css
-│   │   │   └── WhatWeDeliverSection/    # "What We Deliver" section with feature cards
+│   │   │   └── WhatWeDeliverSection/   
 │   │   │       ├── WhatWeDeliverSection.jsx
 │   │   │       └── WhatWeDeliverSection.css
-│   │   ├── App.jsx                     # Main application component, handles routing and overall layout 🌐
-│   │   ├── index.css                   # Global CSS styles 🎨
-│   │   ├── main.jsx                    # Entry point for React app (renders App.jsx)
-│   │   └── assets/                     # (Optional: for other local assets)
+│   │   ├── App.jsx                
+│   │   ├── index.css                 
+│   │   ├── main.jsx                 
+│   │   └── assets/                     
 │   ├── .gitignore
 │   ├── eslint.config.js
-│   ├── package.json                    # Frontend dependencies and scripts 📦
+│   ├── package.json                   
 │   ├── package-lock.json
-│   ├── README.md                       # This file 📄
-│   └── vite.config.js                  # Vite configuration ⚡
+│   ├── README.md                      
+│   └── vite.config.js                  
 │
-└── server/                       # Node.js Backend Project Root 🖥️
-├── node_modules/             # Installed Node.js packages 📦
-├── server.js                 # Main server file with authentication logic 🔒
-├── package.json              # Backend dependencies and scripts
+└── server/                     
+├── node_modules/             
+├── server.js              
+├── package.json              
 └── package-lock.json
 
 
