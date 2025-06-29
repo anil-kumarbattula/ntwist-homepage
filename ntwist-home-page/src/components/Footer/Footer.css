@@ -1,0 +1,95 @@
+
+.footer {
+    background-color: #1a1a1a; /* Very dark background */
+    color: #ccc; /* Light grey text */
+    padding: 60px 0 30px 0;
+    font-size: 0.9rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align content at the top */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 40px; /* Space between main sections */
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 50px; /* Adjust logo size */
+    filter: brightness(0) invert(1); /* Makes logo white if it's dark colored */
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid for columns */
+    gap: 30px;
+    flex-grow: 1; /* Allows links grid to take available space */
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff; /* White heading */
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    padding-left: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary-color); /* Highlight on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333; /* Separator line */
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #888; /* Lighter copyright text */
+}
+
+@media (max-width: 1200px) {
+    .footer-top {
+        flex-direction: column; /* Stack logo and links grid */
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links-grid {
+        justify-content: center; /* Center columns in grid */
+        text-align: center;
+    }
+    .footer-column {
+        flex: unset; /* Remove flex shrink/grow */
+        width: 100%; /* Take full width when stacked */
+        max-width: 300px; /* Max width for columns on smaller screens */
+    }
+    .footer-column ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px; /* Make links horizontal on small screens */
+    }
+    .footer-column li {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px 0;
+    }
+    .footer-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More compact grid */
+    }
+}

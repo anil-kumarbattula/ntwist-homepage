@@ -1,0 +1,107 @@
+
+.industries-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--section-bg-dark); /* Dark background like the original site */
+    color: var(--light-text);
+}
+
+.industries-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--light-text); /* Heading color for dark background */
+}
+
+.industries-grid {
+    display: flex; /* Use flexbox for two large cards */
+    gap: 40px; /* Space between cards */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.industry-card {
+    background-color: #3f546a; /* Slightly lighter dark background for cards */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    flex: 1; /* Allows cards to grow */
+    min-width: 350px; /* Minimum width for each card */
+    max-width: 550px; /* Max width to control card size on large screens */
+    display: flex;
+    flex-direction: column; /* Stack image and content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.industry-image {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block;
+}
+
+.industry-card .card-content {
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to take available space */
+}
+
+.industry-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+.industry-card p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text for dark background */
+    margin-bottom: 25px;
+    flex-grow: 1; /* Allows paragraph to expand */
+}
+
+.industry-card .btn-outline {
+    border-color: var(--light-text); /* White border for outline button */
+    color: var(--light-text);
+    align-self: flex-start; /* Align button to start */
+}
+
+.industry-card .btn-outline:hover {
+    background-color: var(--primary-color); /* Example hover */
+    border-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+@media (max-width: 1200px) {
+    .industries-section h2 {
+        font-size: 2rem;
+    }
+    .industries-grid {
+        flex-direction: column; /* Stack cards on medium screens */
+        align-items: center;
+        gap: 30px;
+    }
+    .industry-card {
+        max-width: 80%; /* Adjust width when stacked */
+    }
+}
+
+@media (max-width: 1200px) {
+    .industry-card {
+        min-width: 90%;
+    }
+    .industry-image {
+        height: 200px;
+    }
+    .industry-card h3 {
+        font-size: 1.5rem;
+    }
+    .industry-card p {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,116 @@
+/* src/components/Header/Header.css */
+.header {
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cookie-consent-bar {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.cookie-consent-bar .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between text and buttons */
+}
+
+.cookie-consent-bar .cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-consent-bar .btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    background-color: #0b0b0b; /* Slightly lighter button */
+    color: #fff;
+}
+
+.cookie-consent-bar .btn:hover {
+    background-color: #777;
+}
+
+.main-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px; /* Space between nav items */
+}
+
+.main-nav li a {
+    font-weight: 600;
+    color: var(--dark-text);
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-text);
+}
+
+.header-container {
+    background-color: #283747;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none; /* Hide main nav on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 900;
+    }
+
+    .main-nav.open {
+        display: flex; /* Show when open */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .cookie-consent-bar .container {
+        flex-direction: column; /* Stack text and buttons on mobile */
+        text-align: center;
+    }
+}

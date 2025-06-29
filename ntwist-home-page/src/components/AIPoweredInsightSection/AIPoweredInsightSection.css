@@ -1,0 +1,138 @@
+/* src/components/AIPoweredInsightSection/AIPoweredInsightSection.css */
+
+.ai-powered-insight-section {
+    background-color: #f0f0f0; /* A slightly darker light gray for this section's background */
+    padding: 80px 0; /* Consistent padding */
+    text-align: center; /* Center the main heading */
+}
+
+.ai-powered-insight-section h2 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: 60px; /* Space below the main heading */
+    line-height: 1.3;
+}
+
+/* This container holds all individual phase blocks and stacks them */
+.phases-container {
+    display: flex;
+    flex-direction: column; /* Stack phase blocks vertically */
+    gap: 40px; /* Space between each individual phase block */
+    max-width: 1100px; /* Max width for the entire collection of phase blocks */
+    margin: 0 auto; /* Center the phases container on the page */
+}
+
+/* Styling for each individual phase block (image + text) */
+.phase-block {
+    display: flex; /* Layout image and text side-by-side within each block */
+    align-items: center; /* Vertically align image and text in the middle */
+    gap: 50px; /* Space between the image and text inside the block */
+    padding: 30px; /* Padding inside the white content box */
+    background-color: #fff; /* White background for each phase block */
+    border-radius: 10px; /* Rounded corners for each block */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Subtle shadow for each block */
+}
+
+/* This class is applied dynamically to alternate the image/text side */
+.phase-block--reverse {
+    flex-direction: row-reverse; /* Reverse the order of image and text for alternate blocks */
+}
+
+.phase-block__image-container {
+    flex: 1; /* Allows the image container to take up available space */
+    min-width: 300px; /* Minimum width for image area on larger screens */
+    max-width: 50%; /* Maximum width relative to its parent phase-block */
+    display: flex; /* Use flex to center the image itself */
+    justify-content: center;
+    align-items: center;
+}
+
+.phase-block__image-container img {
+    max-width: 100%; /* Image scales down if container is smaller */
+    height: auto;
+    display: block; /* Removes extra space below image */
+    border-radius: 8px; /* Matches block border-radius */
+    
+}
+
+.phase-block__text-content {
+    flex: 1; /* Allows the text content to take up available space */
+    max-width: 50%; /* Maximum width relative to its parent phase-block */
+    text-align: left; /* Text content aligns to the left */
+}
+
+.phase-block__text-content h3 {
+    font-size: 2rem; /* Heading for each phase block */
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.phase-block__text-content p {
+    font-size: 1.1rem; /* Paragraph font size */
+    color: #555;
+    line-height: 1.7;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .ai-powered-insight-section {
+        padding: 60px 0;
+    }
+    .ai-powered-insight-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .phases-container {
+        gap: 30px; /* Reduce gap between blocks on smaller screens */
+        max-width: 700px; /* Adjust max width of the container */
+    }
+    .phase-block {
+        flex-direction: column; /* Stack image and text vertically within each block */
+        text-align: center; /* Center text when stacked */
+        gap: 20px; /* Reduce gap between image and text when stacked */
+        padding: 20px;
+    }
+    /* Ensure reversed blocks also stack correctly */
+    .phase-block--reverse {
+        flex-direction: column; 
+    }
+    .phase-block__image-container,
+    .phase-block__text-content {
+        max-width: 100%; /* Take full width when stacked */
+        min-width: unset; /* Remove min-width constraint */
+        text-align: center; /* Center text content when stacked */
+    }
+    .phase-block__text-content h3 {
+        font-size: 1.7rem;
+    }
+    .phase-block__text-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-powered-insight-section {
+        padding: 40px 0;
+    }
+    .ai-powered-insight-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .phase-block {
+        padding: 15px;
+    }
+    .phase-block__text-content h3 {
+        font-size: 1.5rem;
+    }
+    .phase-block__text-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-powered-insight-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+}

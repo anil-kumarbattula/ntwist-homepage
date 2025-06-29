@@ -1,0 +1,97 @@
+
+.business-impact-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.business-impact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--dark-text);
+}
+
+.case-studies-grid {
+    display: flex; /* Use flex for side-by-side cards */
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.case-study-card {
+    background-color: var(--section-bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 350px; /* Minimum width for card */
+    max-width: 550px; /* Max width to control card size */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.case-study-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Highlight title with primary color */
+}
+
+.case-study-card .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.case-study-card .result {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Push link to bottom */
+}
+
+.read-more-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: darken(var(--primary-color), 10%); /* Adjust to a specific darker shade */
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .business-impact-section h2 {
+        font-size: 2rem;
+    }
+    .case-studies-grid {
+        flex-direction: column; /* Stack cards on medium screens */
+        align-items: center;
+        gap: 30px;
+    }
+    .case-study-card {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-card {
+        min-width: 90%;
+    }
+    .case-study-card h3 {
+        font-size: 1.5rem;
+    }
+    .case-study-card .description,
+    .case-study-card .result {
+        font-size: 0.95rem;
+    }
+}

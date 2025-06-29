@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Adjust these font-family values to match the actual NTWIST fonts */
+    font-family: 'Open Sans', sans-serif; /* Default body font */
+    line-height: 1.6;
+    color: #333; /* Adjust to NTWIST's primary text color (e.g., a dark grey) */
+    background-color: #f8f8f8; /* Adjust to NTWIST's general background color */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Global Utility Classes / Variables */
+/* Adjust these color values to precisely match NTWIST's palette using a color picker tool */
+:root {
+    --primary-color: #007bff; /* Placeholder: often a strong blue or green for tech companies */
+    --secondary-color: #6c757d; /* Placeholder: a neutral grey */
+    --accent-color: #28a745; /* Placeholder: a bright accent color, often used for primary CTAs */
+    --dark-text: #333; /* A common dark text color */
+    --light-text: #f4f4f4; /* A common light text color for dark backgrounds */
+    --border-color: #ddd; /* A light border color */
+    --section-bg-light: #f9f9f9; /* A very light background for sections */
+    --section-bg-dark: #2c3e50; /* A dark background for certain sections */
+}
+
+.container {
+    max-width: 1200px; /* Adjust based on NTWIST's typical content width */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+}
+
+/* Base button styles */
+.btn {
+    display: inline-block;
+    background: var(--primary-color); /* Primary button color */
+    color: var(--light-text);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px; /* Adjust for rounded corners if NTWIST uses them */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    /* You'll need to pick a slightly darker shade of --primary-color for hover effect */
+    background-color: #0056b3; /* Example darker blue */
+}
+
+/* Outline button style (used for "Explore Use Cases" in Industries) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color); /* Border color matches text */
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    /* Adjust this font-family to match NTWIST's heading font */
+    font-family: 'Montserrat', sans-serif; 
+    margin-bottom: 1rem;
+    color: var(--dark-text); /* Default heading color */
+}
+
+/* Basic responsiveness for containers */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px; /* Reduce padding on smaller screens */
+    }
+}

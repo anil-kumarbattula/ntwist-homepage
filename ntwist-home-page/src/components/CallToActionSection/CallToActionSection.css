@@ -1,0 +1,52 @@
+
+.call-to-action-section {
+    background-color: var(--primary-color); /* Or a specific dark blue/green from NTWIST */
+    color: var(--light-text);
+    padding: 80px 0;
+    text-align: center;
+    position: relative; /* For any potential background elements */
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.call-to-action-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Center paragraph and add bottom margin */
+    line-height: 1.8;
+}
+
+.call-to-action-section .btn {
+    background-color: var(--accent-color); /* Prominent button color */
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Pill shape */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.call-to-action-section .btn:hover {
+    background-color: darken(var(--accent-color), 10%); /* Adjust to a specific darker shade */
+}
+
+@media (max-width: 1200px) {
+    .call-to-action-section {
+        padding: 60px 0;
+    }
+    .call-to-action-section h2 {
+        font-size: 2rem;
+    }
+    .call-to-action-section p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .call-to-action-section h2 {
+        font-size: 1.8rem;
+    }
+}

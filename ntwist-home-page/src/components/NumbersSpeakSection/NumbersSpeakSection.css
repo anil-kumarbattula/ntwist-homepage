@@ -1,0 +1,76 @@
+
+.numbers-speak-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--section-bg-light); /* Or a specific light grey from NTWIST */
+}
+
+.numbers-speak-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--dark-text);
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top to handle varying text heights */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px; /* Space between stat items */
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 250px; /* Minimum width for each stat item */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 3.5rem; /* Large, bold numbers */
+    font-weight: 700;
+    color: var(--primary-color); /* Primary color for numbers */
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+    .numbers-speak-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .stats-grid {
+        gap: 30px;
+    }
+    .stat-value {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        flex-direction: column; /* Stack vertically on very small screens */
+        align-items: center;
+        gap: 20px;
+    }
+    .stat-item {
+        min-width: 80%; /* Take more width when stacked */
+        max-width: 350px; /* Max width to prevent overly wide items on larger mobile screens */
+    }
+    .stat-value {
+        font-size: 2.5rem;
+    }
+    .stat-label {
+        font-size: 1rem;
+    }
+}
